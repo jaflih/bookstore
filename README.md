@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://jaflih.github.io/bookstore/
+[Live Demo Link](https://jaflih.github.io/bookstore/)
 
 ## Getting Started
 
