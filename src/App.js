@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Books from './components/Books';
+import BooksContainer from './pages/BooksContainer';
 import Categories from './components/Categories';
 import Header from './components/Header';
 
@@ -8,7 +8,7 @@ export default function App() {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<Books />} />
+        <Route path="/" element={<BooksContainer />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </div>
