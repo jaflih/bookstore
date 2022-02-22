@@ -1,11 +1,13 @@
 import React from 'react';
-import booksList from '../datas/BooksList';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 
 export default function Books() {
+  const books = useSelector((state) => state.booksReducer);
+
   return (
     <div className="books-container">
-      {booksList.map((book) => (
+      {books.map((book) => (
         <Book key={book.id} book={book} />
       ))}
     </div>

@@ -1,11 +1,21 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
 
 export default function Book({ book }) {
   const style = {
     border: '1px solid black',
     display: 'flex',
   };
+
+  const dispatch = useDispatch();
+
+  const handleClick = (event, idBook) => {
+    event.preventDefault();
+    dispatch(removeBook(idBook));
+  };
+
   return (
     <div className="book-container" style={style}>
       <div>
@@ -16,10 +26,7 @@ export default function Book({ book }) {
 
       <div>
         <div className="book-completed-image">O</div>
-        <div className="book-completed">
-          {book.completed}
-          %
-        </div>
+        <div className="book-completed">{book.completed}</div>
         <div className="book-completed-prefix">completed</div>
       </div>
 
@@ -33,7 +40,9 @@ export default function Book({ book }) {
       </div>
 
       <div>
-        <button type="button"> Remove </button>
+        <button type="button" onClick={(event) => handleClick(event, book.id)}>
+          Remove
+        </button>
       </div>
     </div>
   );
