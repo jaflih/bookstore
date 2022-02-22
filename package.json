@@ -1,7 +1,7 @@
 {
   "name": "bookstore",
   "version": "0.1.0",
-  "homepage": "jaflih.github.io/bookstore/",
+  "homepage": "https://jaflih.github.io/bookstore",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
