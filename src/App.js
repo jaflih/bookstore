@@ -6,9 +6,9 @@ import Header from './components/Header';
 import store from './redux/configureStore';
 import { getBooks } from './redux/books/books';
 
-export default function App() {
-  store.dispatch(getBooks());
+store.dispatch(getBooks());
 
+export default function App() {
   return (
     <Provider store={store}>
       <div>
