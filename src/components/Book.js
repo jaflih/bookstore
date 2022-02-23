@@ -40,7 +40,7 @@ export default function Book({ book }) {
       </div>
 
       <div>
-        <button type="button" onClick={(event) => handleClick(event, book.id)}>
+        <button type="button" onClick={(event) => handleClick(event, book.item_id)}>
           Remove
         </button>
       </div>

@@ -36,7 +36,7 @@ const reducer = (state = initialState, action) => {
     case ADD_BOOK_ACTION:
       return [...state, action.payload];
     case REMOVE_BOOK_ACTION:
-      return state.filter((book) => book.id !== action.payload);
+      return state.filter((book) => book.item_id !== action.payload);
     case GET_BOOKS_ACTION: {
       const bookList = [];
       Object.keys(action.payload).forEach((key) => {
