@@ -17,10 +17,18 @@ export const addBook = (book) => async (dispatch) => {
     );
 };
 
-export const removeBook = (payload) => ({
-  type: REMOVE_BOOK_ACTION,
-  payload,
-});
+export const removeBook = (bookId) => async (dispatch) => {
+  await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1jamYE0q21KGJDxY2H1v/books/${bookId}`, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ item_id: bookId }),
+  })
+    .then((response) => response.text())
+    .then(
+      () => dispatch({ type: REMOVE_BOOK_ACTION, payload: bookId }),
+      () => dispatch({ type: REMOVE_BOOK_ACTION, payload: null }),
+    );
+};
 
 export const getBooks = () => async (dispatch) => {
   await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1jamYE0q21KGJDxY2H1v/books')
