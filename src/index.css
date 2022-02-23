@@ -141,11 +141,8 @@ h1 {
   border: 6px solid transparent;
   background-size: 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
   background-repeat: no-repeat;
-  background-image:
-    linear-gradient(white, white),
-    linear-gradient(30deg, lightgray 36%, lightgray 30%),
-    linear-gradient(120deg, #0290ff 36%, #0290ff 30%),
-    linear-gradient(300deg, #0290ff 36%, #0290ff 30%),
+  background-image: linear-gradient(white, white), linear-gradient(30deg, lightgray 36%, lightgray 30%),
+    linear-gradient(120deg, #0290ff 36%, #0290ff 30%), linear-gradient(300deg, #0290ff 36%, #0290ff 30%),
     linear-gradient(210deg, #0290ff 36%, #0290ff 30%);
   background-position: center center, left top, right top, left bottom, right bottom;
   background-origin: content-box, border-box, border-box, border-box, border-box;
@@ -249,7 +246,6 @@ h1 {
 }
 
 h2 {
-  width: 10.875rem;
   height: 1.5rem;
   margin: 0 20px 20px 20px;
   padding: 0 20px;
