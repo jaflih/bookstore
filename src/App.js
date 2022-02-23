@@ -4,6 +4,9 @@ import BooksContainer from './pages/BooksContainer';
 import Categories from './components/Categories';
 import Header from './components/Header';
 import store from './redux/configureStore';
+import { getBooks } from './redux/books/books';
+
+store.dispatch(getBooks());
 
 export default function App() {
   return (
