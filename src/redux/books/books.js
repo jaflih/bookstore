@@ -33,7 +33,7 @@ const reducer = (state = initialState, action) => {
       const bookList = [];
       Object.keys(action.payload).forEach((key) => {
         const book = action.payload[key][0];
-        book.id = key;
+        book.item_id = key;
         bookList.push(book);
       });
       return bookList;
