@@ -29,6 +29,15 @@ const reducer = (state = initialState, action) => {
       return [...state, action.payload];
     case REMOVE_BOOK_ACTION:
       return state.filter((book) => book.id !== action.payload);
+    case GET_BOOKS_ACTION: {
+      const bookList = [];
+      Object.keys(action.payload).forEach((key) => {
+        const book = action.payload[key][0];
+        book.id = key;
+        bookList.push(book);
+      });
+      return bookList;
+    }
     default:
       return state;
   }
