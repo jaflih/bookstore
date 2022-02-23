@@ -1,5 +1,6 @@
 export const ADD_BOOK_ACTION = 'ADD_BOOK_ACTION';
 export const REMOVE_BOOK_ACTION = 'REMOVE_BOOK_ACTION';
+export const GET_BOOKS_ACTION = 'GET_BOOKS_ACTION';
 
 const initialState = [];
 
@@ -12,6 +13,15 @@ export const removeBook = (payload) => ({
   type: REMOVE_BOOK_ACTION,
   payload,
 });
+
+export const getBooks = () => async (dispatch) => {
+  await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1jamYE0q21KGJDxY2H1v/books')
+    .then((books) => books.json())
+    .then(
+      (data) => dispatch({ type: GET_BOOKS_ACTION, payload: data }),
+      () => dispatch({ type: GET_BOOKS_ACTION, payload: [] }),
+    );
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
