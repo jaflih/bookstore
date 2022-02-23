@@ -52,6 +52,8 @@ const reducer = (state = initialState, action) => {
       Object.keys(action.payload).forEach((key) => {
         const book = action.payload[key][0];
         book.item_id = key;
+        book.author = 'Suzanne Collins';
+        book.completed = 80;
         bookList.push(book);
       });
       return bookList;

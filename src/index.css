@@ -1,3 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   margin: 0;
+  box-sizing: content-box;
+  background-color: #f5f6fa;
+}
+
+.header {
+  background: #fff;
+  height: 5.938rem;
+  margin: 20px 20px 0 20px;
+  padding: 0 6.188rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+}
+
+.links li {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+}
+
+.links li a {
+  color: #8682828e;
+  text-decoration: none;
+}
+
+.links li a.active-style {
+  color: #121212;
+}
+
+.account {
+  font-size: 30px;
+  color: #0290ff;
+}
+
+.books-container {
+  background: #fafafa;
+  margin: 0 20px 20px 20px;
+  padding: 20px;
+  border-bottom: 2px solid #86828218;
+}
+
+.book-container {
+  padding: 2rem 1rem 1.625rem 1rem;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-category {
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.book-title {
+  width: 12.313rem;
+  height: 1.813rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.book-author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.book-completed-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+}
+
+.oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  background-size: 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(white, white),
+    linear-gradient(30deg, lightgray 36%, lightgray 30%),
+    linear-gradient(120deg, #0290ff 36%, #0290ff 30%),
+    linear-gradient(300deg, #0290ff 36%, #0290ff 30%),
+    linear-gradient(210deg, #0290ff 36%, #0290ff 30%);
+  background-position: center center, left top, right top, left bottom, right bottom;
+  background-origin: content-box, border-box, border-box, border-box, border-box;
+  background-clip: content-box, border-box, border-box, border-box, border-box;
+}
+
+.book-completed {
+  display: flex;
+}
+
+.book-completed-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #121212;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-completed-value span {
+  font-size: 0.875rem;
+  color: #8682828e;
+}
+
+.book-current-chapter {
+  color: #8682828e;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.book-current-chapter-2 {
+  color: #121212;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.book-current {
+  border-left: 3px solid #86828218;
+  padding-left: 20px;
+}
+
+.book-panel {
+  display: flex;
+  width: 4.563rem;
+  height: 1.188rem;
+  margin-top: 20px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.book-panel span {
+  margin: 0 0 0 0;
+}
+
+.button {
+  color: #4386bf;
+  background-color: #fff;
+  border: none;
+  margin: 0 20px;
+  font-weight: 300;
+}
+
+.bg-right {
+  border-right: 2px solid #86828218;
+  padding-right: 20px;
+}
+
+.book-current-chapter-3 {
+  margin-top: 20px;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  height: 1.5rem;
+  margin: 0 20px 20px 20px;
+  padding: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+input {
+  width: 40%;
+  padding: 5px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #868282ad;
+  margin-right: 20px;
+}
+
+select {
+  width: 25%;
+  background-color: white;
+  border: none;
+  padding: 5px;
+  margin-right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #868282ad;
+}
+
+form button {
+  width: 11.5rem;
+  height: 27px;
+  margin: 0;
+  padding: 0;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+}
+
+form {
+  padding: 0 20px;
+  margin: 0 20px 20px 20px;
 }
