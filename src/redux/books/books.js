@@ -4,10 +4,18 @@ export const GET_BOOKS_ACTION = 'GET_BOOKS_ACTION';
 
 const initialState = [];
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK_ACTION,
-  payload,
-});
+export const addBook = (book) => async (dispatch) => {
+  await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1jamYE0q21KGJDxY2H1v/books', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(book),
+  })
+    .then((response) => response.text())
+    .then(
+      () => dispatch({ type: ADD_BOOK_ACTION, payload: book }),
+      () => dispatch({ type: ADD_BOOK_ACTION, payload: null }),
+    );
+};
 
 export const removeBook = (payload) => ({
   type: REMOVE_BOOK_ACTION,
