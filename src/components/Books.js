@@ -8,7 +8,7 @@ export default function Books() {
   return (
     <div className="books-container">
       {books.map((book) => (
-        <Book key={book.id} book={book} />
+        <Book key={book.item_id} book={book} />
       ))}
     </div>
   );

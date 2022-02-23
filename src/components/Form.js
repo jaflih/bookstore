@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
 export default function Form() {
-  const [idBook, setIdBook] = useState(0);
   const [titleBook, setTitleBook] = useState('');
   const [categoryBook, setCategoryBook] = useState('Action');
 
@@ -11,9 +10,8 @@ export default function Form() {
 
   const submitBookToStore = (event) => {
     event.preventDefault();
-    setIdBook(idBook + 1);
     const newBook = {
-      id: idBook,
+      item_id: Math.floor(Math.random() * 100000),
       title: titleBook,
       category: categoryBook,
       author: 'Suzanne Test',
